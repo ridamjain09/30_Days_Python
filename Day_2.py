@@ -163,7 +163,6 @@ print('Power of num_one to num_two =',num_power)
 
 
 #Find floor division of num_one by num_two and assign the value to a variable floor_division
-
 floor_division = num_one // num_two
 print('Floor Division of numbers is ',floor_division)
 
