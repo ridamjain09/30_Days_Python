@@ -136,7 +136,7 @@ y = int(input('Enter the value'))
 x_intercept = (y+2)//2
 y_intercept = 2*x_intercept-2 
 
-print("Slope Intercept",slope_intercept)
+print("Slope Intercept")
 
 
 #Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
@@ -221,4 +221,5 @@ number_of_seconds_person_lives = years * number_of_seconds_in_a_year
 
 print(number_of_seconds_person_lives)
 
+#Write a Python script that displays the following table
 
