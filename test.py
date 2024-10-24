@@ -16,5 +16,8 @@ Reverse a string input = 'Rid@m.J@in'
 
     
 '''
+import re 
+
+re.escape(pattern='@')
 string_input = 'Rid@m.J@in'
 print(string_input[::-1])
