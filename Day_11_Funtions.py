@@ -262,7 +262,166 @@ food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
 print(add_item(food_staff,'Veggies'))
 
 
+'''Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+'''
 
+def remove_item(rm,item):
+    rm.remove(item)
+    return rm
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+print(remove_item(food_staff,'Mango'))
+
+
+'''
+Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+
+'''
+
+def sum_of_number(num):
+    count = 1
+    total = 0
+    while count <= num :
+        total+=count 
+        count+=1
+    return total
+print(sum_of_number(5))
 
     
+'''
+Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+
+'''
+
+def sum_of_odd(num):
+    total = 0
+    for i in range(1,num+1):
+        if i%2 !=0:
+            total+=i
+    return total
+print(sum_of_odd(10))
+
+
+def sum_of_even(num):
+    total = 0
+    for i in range(1,num+1):
+        if i%2==0:
+            total+=i
+    return total
+print(sum_of_even(20))
+
+
+
+'''
+Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+Call your function is_empty, it takes a parameter and it checks if it is empty or not
+Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+
+
+
+'''
+
+def factorial(num):
+    if num == 0:
+        return 1 
+    return num*factorial(num-1)
+print(factorial(5))
+
+
+def is_empty(parameter):
+    if  not parameter:
+        return True
+    return False
+
+
+print(is_empty(""))
+
+def calculate_mean(*args):
+
+    if len(args) == 0:
+        return 0
+    
+    total = 0
+    for i in args:
+        total+=i
+    return ((total)/len(args))
+print(calculate_mean(1, 2, 3, 4, 5))
+
+
+def calculate_median(*args):
+    args = sorted(args)
+    total = 0
+
+    if len(args) %2 == 0 :
+        return (args[len(args)//2 -1] + args[len(args)//2] ) / 2
+
+    else :
+        return args[len(args)//2] 
+
+print(calculate_median(4, 5, 8, 9, 10, 17))  
+
+
+def calculate_range(*num):
+    max_value = max(num)
+    min_value = min(num)
+    range = max_value - min_value
+    return range
+print(calculate_range(4, 5, 8, 9, 10, 17))
+
+
+def calculate_variance(num): #F -> calculate mean
+    if not  num:
+        return None
+    mean = sum(num) // len(num)
+    square_diff  = [(n -mean)** 2 for n in  num]
+    variance = sum(square_diff) / len(num)
+    return variance
+print(calculate_variance([4, 5, 8, 9, 10, 17]))
+
+def  calculate_std(f,num):
+    return f(num) ** 0.5
+data = [1, 2, 3, 4, 5]
+print(calculate_std(calculate_variance,data))    
+
+'''
+
+
+
+
+    Write a function called is_prime, which checks if a number is prime.
+    Write a functions which checks if all items are unique in the list.
+    Write a function which checks if all the items of the list are of the same data type.
+    Write a function which check if provided variable is a valid python variable
+    Go to the data folder and access the countries-data.py file.
+    Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
+    Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
+
+'''
+
+
+def prime_numbers(num):
+    if num <= 2:
+        return False
+    elif num % num == 0 or 1 :
+        return True
+    
+print(prime_numbers(6))
+
+
+
+def unique_item(n):
+    return len(n) == len(set(n))
+
+print(unique_item([1,2,3,2,3,5]))
+
+def same_datatype(num):
+    first_type = type(num[0])
+    for  i in num :
+        if type(i) != first_type:
+            return False
+    return True
+
+print(same_datatype([1, 'two', 3.0]))
+
+
 

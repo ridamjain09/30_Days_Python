@@ -247,6 +247,7 @@ if person['skills'] in person and 'Python' in person['skills']:
 else:
     print('Python not present')
     
+    
 
 
 
